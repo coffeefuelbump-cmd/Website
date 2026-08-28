@@ -34,10 +34,10 @@
         }
 
         .games-container {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(2, 300px);
             gap: 20px;
-            width: 300px;
+            width: 620px;
         }
 
         .game-button {
@@ -62,12 +62,19 @@
             flex: 1;
         }
 
-        .beta {
+        .alpha {
             margin-bottom: 15px;
             font-size: 1rem;
             font-weight: bold;
             letter-spacing: 3px;
             color: rgba(255,255,255,0.85);
+        }
+
+        @media (max-width: 700px) {
+            .games-container {
+                grid-template-columns: 1fr;
+                width: 300px;
+            }
         }
     </style>
 </head>
@@ -135,7 +142,6 @@
             Mafia Night
         </a>
 
-        <!-- FNAF -->
         <a class="game-button"
            href="https://now.gg/apps/scott-cawthon/51750/five-nights-at-freddy-s.html"
            target="_blank"
@@ -143,11 +149,18 @@
             Five Nights at Freddy's
         </a>
 
+        <a class="game-button"
+           href="https://www.timestables.com/multiplication-games/"
+           target="_blank"
+           rel="noopener noreferrer">
+            Times Tables
+        </a>
+
     </div>
 
     <div class="spacer"></div>
 
-    <div class="beta">BETA TESTING</div>
+    <div class="alpha">ALPHA TESTING</div>
 
 </body>
 </html>
